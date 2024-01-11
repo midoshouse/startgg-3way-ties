@@ -1,0 +1,28 @@
+query ScoresQuery($event_slug: String!, $page: Int!) {
+  event(slug: $event_slug) {
+    sets(page: $page) {
+      pageInfo {
+        totalPages
+      }
+      nodes {
+        phaseGroup {
+          displayIdentifier
+          phase {
+            name
+          }
+        }
+        slots {
+          entrant {
+            participants {
+              id
+              gamerTag
+            }
+          }
+          standing {
+            placement
+          }
+        }
+      }
+    }
+  }
+}

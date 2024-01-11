@@ -1,0 +1,16 @@
+[package]
+name = "startgg-3way-ties"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+clap = { version = "4.4.14", features = ["derive"] }
+graphql_client = { git = "https://github.com/fenhl/graphql-client", branch = "skip-default-scalars", version = "0.11.0" }
+itertools = "0.12.0"
+reqwest = { version = "0.11.23", default-features = false, features = ["rustls-tls", "json"] }
+serde = { version = "1.0.195", features = ["derive"] }
+serde_json = "1.0.111"
+thiserror = "1.0.56"
+tokio = { version = "1.35.1", features = ["time"] }
+wheel = { git = "https://github.com/fenhl/wheel", branch = "main", version = "0.13.1", features = ["serde", "serde_json", "reqwest"] }
